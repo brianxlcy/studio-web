@@ -1,4 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
+import {
+  BackgroundVideo,
+  BackgroundVideoOverlay,
+} from "@/components/background-video";
+import {
+  Asset,
+  AssetImageContainer,
+  AssetImage,
+  AssetFileType,
+  AssetMetadata,
+  AssetTitle,
+  AssetKeyValue,
+  AssetKey,
+  AssetValue,
+} from "@/components/asset";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -7,27 +22,29 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="relative min-h-svh flex items-center">
-      <video
-        className="absolute inset-0 size-full object-cover -z-10"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      >
-        <source
-          src="https://assets.sp.studio/website-bg-test.mp4"
-          type="video/mp4"
-        />
-        {/* Fallback for browsers that don't support video */}
-        Your browser does not support the video tag.
-      </video>
+      <BackgroundVideo src="https://assets.sp.studio/website-bg-test.mp4" />
+      <BackgroundVideoOverlay />
 
-      <div className="absolute inset-0 -z-10 bg-black/60" />
-
-      <div className="@container w-(--hero-width) h-auto aspect-[2150/800] mx-auto flex flex-col bg-red-500">
-        <div className="absolute w-[31.8cqw] h-auto aspect-[0.855] bg-white/72 backdrop-blur-2xl rounded-xl self-center" />
-        <h1 className="text-hero-tagline select-none flex justify-between">
+      <div className="relative @container w-(--hero-width) h-auto aspect-[2150/800] mx-auto flex flex-col items-center bg-red-500">
+        <Asset>
+          <AssetImageContainer>
+            <AssetImage
+              src={
+                "https://pub-e3ee69ed1074405fbc5b9b3aab86b01d.r2.dev/keep-running-dont-stop.jpg"
+              }
+              alt="keep-running-dont-stop.jpg"
+            />
+            <AssetFileType>JPG</AssetFileType>
+          </AssetImageContainer>
+          <AssetMetadata>
+            <AssetTitle>keep-running-dont-stop.jpg</AssetTitle>
+            <AssetKeyValue>
+              <AssetKey>Created by</AssetKey>
+              <AssetValue>Nano Banana</AssetValue>
+            </AssetKeyValue>
+          </AssetMetadata>
+        </Asset>
+        <h1 className="w-full text-hero-tagline select-none flex justify-between">
           <span>Stu</span>
           <span>dio</span>
         </h1>
