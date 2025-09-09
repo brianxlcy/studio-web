@@ -10,10 +10,20 @@
 
 @media (width >= 835px) {
   :root {
+    /* 
+      Linear interpolation from 90vw at 835px to 95vw at 1360px
+      
+      Points: (835px, 751.5px) → (1360px, 1292px)
+      
+      Formula: y = mx + b
+      - slope (m) = (1292 - 751.5) ÷ (1360 - 835) = 540.5 ÷ 525 ≈ 1.0295
+      - intercept (b) = 751.5 - 1.0295 × 835 ≈ -108.15
+      
+      Result: width = 1.0295 × viewport_width - 108.15px
+    */
     --hero-width: clamp(
       90vw,
-      /* TODO: this algorithm is not correct */
-        calc(90vw + (95 - 90) * (100vw - 835px) / (1360 - 835)),
+      calc((540.5 / 525) * 100vw + 751.5px - (540.5 / 525) * 835px),
       95vw
     );
   }
@@ -21,10 +31,20 @@
 
 @media (width >= 1360px) {
   :root {
+    /* 
+      Linear interpolation from 95vw at 1360px to 84vw at 2560px
+      
+      Points: (1360px, 1292px) → (2560px, 2150.4px)
+      
+      Formula: y = mx + b
+      - slope (m) = (2150.4 - 1292) ÷ (2560 - 1360) = 858.4 ÷ 1200 ≈ 0.7153
+      - intercept (b) = 1292 - 0.7153 × 1360 ≈ 319.15
+      
+      Result: width = 0.7153 × viewport_width + 319.15px
+    */
     --hero-width: clamp(
       84vw,
-      /* TODO: this algorithm is not correct */
-        calc(95vw + (84 - 95) * (100vw - 1360px) / (2560 - 1360)),
+      calc((858.4 / 1200) * 100vw + 1292px - (858.4 / 1200) * 1360px),
       95vw
     );
   }
