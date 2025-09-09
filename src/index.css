@@ -1,12 +1,22 @@
 @import "tailwindcss";
+@import "./styles/font-size.css";
 @import "@fontsource-variable/inter";
 
 :root {
   --hero-width: 100vw;
-  --hero-tagline: 24.8cqw;
-  --hero-tagline--line-height: 1.2;
-  --hero-tagline--letter-spacing: -0.02em;
-  --hero-tagline--font-weight: 700;
+  /*
+    1292px is the width of the hero at 1360px
+  */
+  --asset-padding: calc(6 / 1292 * 100cqw);
+  --asset-gap: calc(12 / 1292 * 100cqw);
+  --asset-image-container-padding: calc(8 / 1292 * 100cqw);
+  --asset-file-type-height: calc(18 / 1292 * 100cqw);
+  --asset-file-type-padding-x: calc(5 / 1292 * 100cqw);
+  --asset-file-type-padding-y: calc(1 / 1292 * 100cqw);
+  --asset-metadata-gap: calc(5 / 1292 * 100cqw);
+  --asset-metadata-padding-x: calc(8 / 1292 * 100cqw);
+  --asset-metadata-padding-b: calc(14 / 1292 * 100cqw);
+  --asset-key-value-gap: calc(5 / 1292 * 100cqw);
 }
 
 @media (width >= 835px) {
@@ -53,7 +63,7 @@
 
 @media (width >= 2560px) {
   :root {
-    --hero-width: 84vw;
+    --hero-width: calc(0.84 * 2560px);
   }
 }
 
@@ -63,10 +73,12 @@
   --color-background: #000;
   --color-foreground: #ffd922;
   --breakpoint-835: 835px;
-  --text-hero-tagline: var(--hero-tagline);
-  --text-hero-tagline--line-height: var(--hero-tagline--line-height);
-  --text-hero-tagline--letter-spacing: var(--hero-tagline--letter-spacing);
-  --text-hero-tagline--font-weight: var(--hero-tagline--font-weight);
+  /*
+    1292px is the width of the hero at 1360px
+  */
+  --radius-asset: calc(14 / 1292 * 100cqw);
+  --radius-asset-image: calc(8 / 1292 * 100cqw);
+  --radius-asset-file-type: calc(5 / 1292 * 100cqw);
 }
 
 body {

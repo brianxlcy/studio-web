@@ -1,0 +1,50 @@
+:root {
+  --hero-tagline: 24.8cqw;
+  --hero-tagline--line-height: 1.2;
+  --hero-tagline--letter-spacing: -0.02em;
+  --hero-tagline--font-weight: 700;
+
+  /*
+    1292px is the width of the hero at 1360px
+  */
+  --asset-file-type: calc(14 / 1292 * 100cqw);
+  --asset-file-type--line-height: 1.3;
+  --asset-file-type--letter-spacing: -0.02em;
+  --asset-file-type--font-weight: 450;
+
+  --asset-title: calc(17 / 1292 * 100cqw);
+  --asset-title--line-height: 1.2;
+  --asset-title--letter-spacing: -0.02em;
+  --asset-title--font-weight: 500;
+
+  --asset-key-value: calc(14 / 1292 * 100cqw);
+  --asset-key-value--line-height: 1.2;
+  --asset-key-value--letter-spacing: 0em;
+  --asset-key-value--font-weight: 500;
+}
+
+@theme inline {
+  --text-hero-tagline: var(--hero-tagline);
+  --text-hero-tagline--line-height: var(--hero-tagline--line-height);
+  --text-hero-tagline--letter-spacing: var(--hero-tagline--letter-spacing);
+  --text-hero-tagline--font-weight: var(--hero-tagline--font-weight);
+
+  --text-asset-file-type: var(--asset-file-type);
+  --text-asset-file-type--line-height: var(--asset-file-type--line-height);
+  --text-asset-file-type--letter-spacing: var(
+    --asset-file-type--letter-spacing
+  );
+  --text-asset-file-type--font-weight: var(--asset-file-type--font-weight);
+
+  --text-asset-title: var(--asset-title);
+  --text-asset-title--line-height: var(--asset-title--line-height);
+  --text-asset-title--letter-spacing: var(--asset-title--letter-spacing);
+  --text-asset-title--font-weight: var(--asset-title--font-weight);
+
+  --text-asset-key-value: var(--asset-key-value);
+  --text-asset-key-value--line-height: var(--asset-key-value--line-height);
+  --text-asset-key-value--letter-spacing: var(
+    --asset-key-value--letter-spacing
+  );
+  --text-asset-key-value--font-weight: var(--asset-key-value--font-weight);
+}

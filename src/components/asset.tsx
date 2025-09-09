@@ -4,8 +4,8 @@ export function Asset({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        `absolute w-[31.8cqw] h-auto aspect-[0.855] p-1.5 flex flex-col gap-3
-        bg-white/72 backdrop-blur-2xl rounded-[14px] font-inter select-none pointer-events-none`,
+        `absolute w-[31.8cqw] h-auto aspect-[0.855] p-(--asset-padding) flex flex-col gap-(--asset-gap)
+        bg-white/72 backdrop-blur-2xl rounded-asset font-inter select-none pointer-events-none`,
         className
       )}
       {...props}
@@ -20,7 +20,7 @@ export function AssetImageContainer({
   return (
     <div
       className={cn(
-        "relative w-full h-auto aspect-square rounded-lg p-2",
+        "relative w-full h-auto aspect-square p-(--asset-image-container-padding)",
         className
       )}
       {...props}
@@ -35,7 +35,7 @@ export function AssetImage({
   return (
     <img
       className={cn(
-        "absolute inset-0 size-full object-cover rounded-lg",
+        "absolute inset-0 size-full object-cover rounded-asset-image",
         className
       )}
       {...props}
@@ -50,9 +50,10 @@ export function AssetFileType({
   return (
     <span
       className={cn(
-        `w-fit h-[18px] px-[5px] flex items-center rounded-[5px] border
+        `w-fit h-(--asset-file-type-height) px-(--asset-file-type-padding-x) py-(--asset-file-type-padding-y)
+        flex items-center rounded-asset-file-type border
         border-[#7d7d7d]/40 bg-[#ebebeb]/24 bg-blend-difference backdrop-blur-md
-        text-[14px] font-[450] text-white/80 leading-[1.2] tracking-[-0.02em]`,
+        text-asset-file-type text-white/80`,
         className
       )}
       {...props}
@@ -66,7 +67,10 @@ export function AssetMetadata({
 }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("flex flex-col gap-[5px] px-2 pb-[14px]", className)}
+      className={cn(
+        "flex flex-col gap-(--asset-metadata-gap) px-(--asset-metadata-padding-x) pb-(--asset-metadata-padding-b)",
+        className
+      )}
       {...props}
     />
   );
@@ -78,10 +82,7 @@ export function AssetTitle({
 }: React.ComponentProps<"h3">) {
   return (
     <h3
-      className={cn(
-        "text-[17px] font-medium text-black/88 leading-[1.2] tracking-[-0.02em] truncate",
-        className
-      )}
+      className={cn("text-asset-title text-black/88 truncate", className)}
       {...props}
     />
   );
@@ -93,7 +94,10 @@ export function AssetKeyValue({
 }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("flex items-center gap-[5px] opacity-50", className)}
+      className={cn(
+        "flex items-center gap-(--asset-key-value-gap) opacity-50",
+        className
+      )}
       {...props}
     />
   );
@@ -105,10 +109,7 @@ export function AssetKey({
 }: React.ComponentProps<"span">) {
   return (
     <span
-      className={cn(
-        "text-[14px] font-medium text-black/88 leading-[1.2] opacity-60",
-        className
-      )}
+      className={cn("text-asset-key-value text-black/88 opacity-60", className)}
       {...props}
     />
   );
@@ -120,10 +121,7 @@ export function AssetValue({
 }: React.ComponentProps<"span">) {
   return (
     <span
-      className={cn(
-        "text-[14px] font-medium text-black/88 leading-[1.2]",
-        className
-      )}
+      className={cn("text-asset-key-value text-black/88", className)}
       {...props}
     />
   );
