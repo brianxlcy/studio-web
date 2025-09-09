@@ -17,6 +17,19 @@
   --asset-metadata-padding-x: calc(8 / 1292 * 100cqw);
   --asset-metadata-padding-b: calc(14 / 1292 * 100cqw);
   --asset-key-value-gap: calc(5 / 1292 * 100cqw);
+  --logo-container-margin-b: calc(-28 / 1292 * 100cqw);
+  --logo-container-padding-x: calc(12 / 1292 * 100cqw);
+  --logo-width: calc(52 / 1292 * 100cqw);
+  --logo-height: calc(28 / 1292 * 100cqw);
+  --hero-tagline-prefix-margin-l: calc(-12 / 1292 * 100cqw);
+  --action-button-group-margin-t: calc(-40 / 1292 * 100cqw);
+  --action-button-group-padding-x: calc(12 / 1292 * 100cqw);
+  --action-button-height: calc(40 / 1292 * 100cqw);
+  --action-button-gap: calc(12 / 1292 * 100cqw);
+  --arrow-right-icon-width: calc(15.5 / 1292 * 100cqw);
+  --arrow-right-icon-height: calc(17.25 / 1292 * 100cqw);
+  --asterisk-icon-width: calc(16.34 / 1292 * 100cqw);
+  --asterisk-icon-height: calc(15.825 / 1292 * 100cqw);
 }
 
 @media (width >= 835px) {
@@ -83,4 +96,8 @@
 
 body {
   @apply min-h-svh bg-background text-foreground font-helvetica-neue antialiased overscroll-none;
+}
+
+img {
+  @apply select-none pointer-events-none;
 }

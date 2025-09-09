@@ -21,6 +21,28 @@
   --asset-key-value--line-height: 1.2;
   --asset-key-value--letter-spacing: 0em;
   --asset-key-value--font-weight: 500;
+
+  --action-button: calc(22 / 1292 * 100cqw);
+  --action-button--line-height: 1.2;
+  --action-button--letter-spacing: -0.03em;
+  --action-button--font-weight: 700;
+
+  --footer: 12px;
+  --footer--line-height: 1.2;
+  --footer--letter-spacing: -0.01em;
+  --footer--font-weight: 500;
+}
+
+@media (width >= 501px) {
+  :root {
+    --footer: 14px;
+  }
+}
+
+@media (width >= 835px) {
+  :root {
+    --footer: 16px;
+  }
 }
 
 @theme inline {
@@ -47,4 +69,14 @@
     --asset-key-value--letter-spacing
   );
   --text-asset-key-value--font-weight: var(--asset-key-value--font-weight);
+
+  --text-action-button: var(--action-button);
+  --text-action-button--line-height: var(--action-button--line-height);
+  --text-action-button--letter-spacing: var(--action-button--letter-spacing);
+  --text-action-button--font-weight: var(--action-button--font-weight);
+
+  --text-footer: var(--footer);
+  --text-footer--line-height: var(--footer--line-height);
+  --text-footer--letter-spacing: var(--footer--letter-spacing);
+  --text-footer--font-weight: var(--footer--font-weight);
 }

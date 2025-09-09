@@ -14,10 +14,11 @@ export const twMerge = extendTailwindMerge({
             "asset-file-type",
             "asset-title",
             "asset-key-value",
+            "action-button",
+            "footer",
           ],
         },
       ],
-      rounded: [{ rounded: ["main", "modal"] }],
     },
   },
 });

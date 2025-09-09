@@ -14,6 +14,15 @@ import {
   AssetKey,
   AssetValue,
 } from "@/components/asset";
+import {
+  HeroTagline,
+  HeroTaglinePrefix,
+  HeroTaglineSuffix,
+} from "@/components/hero-tagline";
+import ActionButton from "@/components/action-button";
+import arrowRight from "@/assets/arrow-right.svg";
+import asterisk from "@/assets/asterisk.svg";
+import logo from "@/assets/logo.svg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -44,11 +53,40 @@ function Index() {
             </AssetKeyValue>
           </AssetMetadata>
         </Asset>
-        <h1 className="w-full text-hero-tagline select-none flex justify-between">
-          <span>Stu</span>
-          <span>dio</span>
-        </h1>
+        <div className="self-start px-(--logo-container-padding-x) mb-(--logo-container-margin-b)">
+          <img
+            src={logo}
+            alt="spanStudio logo"
+            className="w-(--logo-width) h-(--logo-height)"
+          />
+        </div>
+        <HeroTagline>
+          <HeroTaglinePrefix>Stu</HeroTaglinePrefix>
+          <HeroTaglineSuffix>dio</HeroTaglineSuffix>
+        </HeroTagline>
+        <div className="self-start mt-(--action-button-group-margin-t) px-(--action-button-group-padding-x)">
+          <ActionButton>
+            START NOW
+            <img
+              src={arrowRight}
+              alt="arrowRightIcon"
+              className="w-(--arrow-right-icon-width) h-(--arrow-right-icon-height)"
+            />
+          </ActionButton>
+          <ActionButton>
+            ENTER THE CODE
+            <img
+              src={asterisk}
+              alt="asteriskIcon"
+              className="w-(--asterisk-icon-width) h-(--asterisk-icon-height)"
+            />
+          </ActionButton>
+        </div>
       </div>
+
+      <footer className="absolute inset-x-0 bottom-8 text-center text-footer text-foreground/40 select-none">
+        DRAG AND DROP
+      </footer>
     </div>
   );
 }
