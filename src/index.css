@@ -1,9 +1,50 @@
 @import "tailwindcss";
 
+:root {
+  --hero-width: 100vw;
+  --hero-tagline: 24.8cqw;
+  --hero-tagline--line-height: 1.2;
+  --hero-tagline--letter-spacing: -0.02em;
+  --hero-tagline--font-weight: 700;
+}
+
+@media (width >= 835px) {
+  :root {
+    --hero-width: clamp(
+      90vw,
+      /* TODO: this algorithm is not correct */
+        calc(90vw + (95 - 90) * (100vw - 835px) / (1360 - 835)),
+      95vw
+    );
+  }
+}
+
+@media (width >= 1360px) {
+  :root {
+    --hero-width: clamp(
+      84vw,
+      /* TODO: this algorithm is not correct */
+        calc(95vw + (84 - 95) * (100vw - 1360px) / (2560 - 1360)),
+      95vw
+    );
+  }
+}
+
+@media (width >= 2560px) {
+  :root {
+    --hero-width: 84vw;
+  }
+}
+
 @theme {
   --font-helvetica-neue: "helvetica-neue-lt-pro", sans-serif;
   --color-background: #000;
   --color-foreground: #ffd922;
+  --breakpoint-835: 835px;
+  --text-hero-tagline: var(--hero-tagline);
+  --text-hero-tagline--line-height: var(--hero-tagline--line-height);
+  --text-hero-tagline--letter-spacing: var(--hero-tagline--letter-spacing);
+  --text-hero-tagline--font-weight: var(--hero-tagline--font-weight);
 }
 
 body {
