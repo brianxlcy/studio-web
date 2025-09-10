@@ -1,10 +1,11 @@
 /*
-    410.84px is the width of the asset at 1360px
+    667px is the width of the hero at 834px
     1292px is the width of the hero at 1360px
+    410.84px is the width of the asset at 1360px
 */
 
 :root {
-  --hero-tagline: 33.1cqw;
+  --hero-tagline: calc(224 / 667 * 100cqw);
   --hero-tagline--line-height: 1.2;
   --hero-tagline--letter-spacing: -0.02em;
   --hero-tagline--font-weight: 700;
@@ -24,26 +25,21 @@
   --asset-key-value--letter-spacing: 0em;
   --asset-key-value--font-weight: 500;
 
-  --action-button: calc(22 / 1292 * 100cqw);
+  --action-button: calc(24.4 / 667 * 100cqw);
   --action-button--line-height: 1.2;
   --action-button--letter-spacing: -0.03em;
   --action-button--font-weight: 700;
 
-  --footer: 12px;
+  --footer: 14px;
   --footer--line-height: 1.2;
   --footer--letter-spacing: -0.01em;
   --footer--font-weight: 500;
 }
 
-@media (width >= 501px) {
-  :root {
-    --footer: 14px;
-  }
-}
-
 @media (width >= 835px) {
   :root {
     --hero-tagline: 24.8cqw;
+    --action-button: calc(22 / 1292 * 100cqw);
     --footer: 16px;
   }
 }

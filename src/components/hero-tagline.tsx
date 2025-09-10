@@ -7,7 +7,7 @@ export function HeroTagline({
   return (
     <h1
       className={cn(
-        "w-full text-hero-tagline select-none flex justify-between",
+        "w-full text-hero-tagline select-none flex justify-center 835:justify-between",
         className
       )}
       {...props}

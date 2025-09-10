@@ -30,11 +30,11 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="relative min-h-svh flex items-center">
+    <div className="relative min-h-svh flex items-center py-20">
       <BackgroundVideo src="https://assets.sp.studio/website-bg-test.mp4" />
       <BackgroundVideoOverlay />
 
-      <div className="relative @container w-(--hero-width) h-auto aspect-[2150/800] mx-auto flex flex-col items-center bg-red-500">
+      <div className="relative @container w-(--hero-width) h-auto aspect-[2150/800] mx-auto flex flex-col items-center">
         <Asset>
           <AssetImageContainer>
             <AssetImage
@@ -53,6 +53,7 @@ function Index() {
             </AssetKeyValue>
           </AssetMetadata>
         </Asset>
+        <div className="h-5 835:hidden" />
         <div className="self-start px-(--logo-container-padding-x) mb-(--logo-container-margin-b)">
           <img
             src={logo}

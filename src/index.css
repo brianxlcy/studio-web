@@ -3,60 +3,29 @@
 @import "@fontsource-variable/inter";
 
 /*
-    410.84px is the width of the asset at 1360px
-    680px is the width of the hero at 834px
+    667px is the width of the hero at 834px
     1292px is the width of the hero at 1360px
+    410.84px is the width of the asset at 1360px
 */
 
 :root {
-  /* 
-    Linear interpolation from 68.6vw at 500px to 81.5vw at 834px
-    
-    Points: (500px, 343px) → (834px, 680px)
-    
-    Formula: y = mx + b
-    - slope (m) = (680 - 343) ÷ (834 - 500) = 337 ÷ 334 ≈ 1.009
-    - intercept (b) = 343 - 1.009 × 500 ≈ -254.5
-    
-    Result: width = 1.009 × viewport_width - 254.5px
-  */
-  --hero-width: clamp(
-    68.6vw,
-    calc((337 / 334) * 100vw + 343px - (337 / 334) * 500px),
-    81.5vw
-  );
-  /* 
-    Linear interpolation from 243.6px at 500px to 348px at 834px
-    
-    Points: (500px, 243.6px) → (834px, 348px)
-    
-    Formula: y = mx + b
-    - slope (m) = (348 - 243.6) ÷ (834 - 500) = 104.4 ÷ 334 ≈ 0.312
-    - intercept (b) = 243.6 - 0.312 × 500 ≈ 87.6
-    
-    Result: width = 0.312 × viewport_width + 87.6px
-  */
-  --asset-width: clamp(
-    243.6px,
-    calc((104.4 / 334) * 100vw + 243.6px - (104.4 / 334) * 500px),
-    348px
-  );
-  /* 
-    Linear interpolation from 8.4px at 500px to 12px at 834px
-    
-    Points: (500px, 8.4px) → (834px, 12px)
-    
-    Formula: y = mx + b
-    - slope (m) = (12 - 8.4) ÷ (834 - 500) = 3.6 ÷ 334 ≈ 0.0108
-    - intercept (b) = 8.4 - 0.0108 × 500 ≈ 3
-    
-    Result: width = 0.0108 × viewport_width + 3px
-  */
-  --asset-radius: clamp(
-    8.4px,
-    calc((3.6 / 334) * 100vw + 8.4px - (3.6 / 334) * 500px),
-    12px
-  );
+  --hero-width: min(88vw, 667px);
+  --logo-container-margin-b: calc(-31.57 / 667 * 100cqw);
+  --logo-container-padding-x: calc(15.8 / 667 * 100cqw);
+  --logo-width: calc(58.715 / 667 * 100cqw);
+  --logo-height: calc(31.58 / 667 * 100cqw);
+  --hero-tagline-prefix-margin-l: 0;
+  --action-button-group-margin-t: calc(-24.57 / 667 * 100cqw);
+  --action-button-group-padding-x: calc(12.36 / 667 * 100cqw);
+  --action-button-height: calc(47.36 / 667 * 100cqw);
+  --action-button-gap: calc(16.27 / 667 * 100cqw);
+  /* TODO: align the design */
+  --arrow-right-icon-width: calc(20 / 667 * 100cqw);
+  --arrow-right-icon-height: calc(20 / 667 * 100cqw);
+  --asterisk-icon-width: calc(20 / 667 * 100cqw);
+  --asterisk-icon-height: calc(20 / 667 * 100cqw);
+
+  --asset-width: max(239px, 31.8cqw);
   --asset-padding: calc(6 / 410.84 * 100cqw);
   --asset-gap: calc(12 / 410.84 * 100cqw);
   --asset-image-container-padding: calc(8 / 410.84 * 100cqw);
@@ -67,19 +36,6 @@
   --asset-metadata-padding-x: calc(8 / 410.84 * 100cqw);
   --asset-metadata-padding-b: calc(14 / 410.84 * 100cqw);
   --asset-key-value-gap: calc(5 / 410.84 * 100cqw);
-  --logo-container-margin-b: calc(-28 / 1292 * 100cqw);
-  --logo-container-padding-x: calc(12 / 1292 * 100cqw);
-  --logo-width: calc(58 / 680 * 100cqw);
-  --logo-height: calc(31 / 680 * 100cqw);
-  --hero-tagline-prefix-margin-l: calc(-12 / 1292 * 100cqw);
-  --action-button-group-margin-t: calc(-40 / 1292 * 100cqw);
-  --action-button-group-padding-x: calc(12 / 1292 * 100cqw);
-  --action-button-height: calc(40 / 1292 * 100cqw);
-  --action-button-gap: calc(12 / 1292 * 100cqw);
-  --arrow-right-icon-width: calc(15.5 / 1292 * 100cqw);
-  --arrow-right-icon-height: calc(17.25 / 1292 * 100cqw);
-  --asterisk-icon-width: calc(16.34 / 1292 * 100cqw);
-  --asterisk-icon-height: calc(15.825 / 1292 * 100cqw);
 }
 
 @media (width >= 835px) {
@@ -100,10 +56,19 @@
       calc((540.5 / 525) * 100vw + 751.5px - (540.5 / 525) * 835px),
       95vw
     );
-    --asset-width: 31.8cqw;
-    --asset-radius: calc(14 / 1292 * 100cqw);
+    --logo-container-margin-b: calc(-28 / 1292 * 100cqw);
+    --logo-container-padding-x: calc(12 / 1292 * 100cqw);
     --logo-width: calc(52 / 1292 * 100cqw);
     --logo-height: calc(28 / 1292 * 100cqw);
+    --hero-tagline-prefix-margin-l: calc(-12 / 1292 * 100cqw);
+    --action-button-group-margin-t: calc(-40 / 1292 * 100cqw);
+    --action-button-group-padding-x: calc(12 / 1292 * 100cqw);
+    --action-button-height: calc(40 / 1292 * 100cqw);
+    --action-button-gap: calc(12 / 1292 * 100cqw);
+    --arrow-right-icon-width: calc(15.5 / 1292 * 100cqw);
+    --arrow-right-icon-height: calc(17.25 / 1292 * 100cqw);
+    --asterisk-icon-width: calc(16.34 / 1292 * 100cqw);
+    --asterisk-icon-height: calc(15.825 / 1292 * 100cqw);
   }
 }
 
@@ -140,7 +105,7 @@
   --color-background: #000;
   --color-foreground: #ffd922;
   --breakpoint-835: 835px;
-  --radius-asset: var(--asset-radius);
+  --radius-asset: max(8px, calc(14 / 1292 * 100cqw));
   --radius-asset-image: calc(8 / 410.84 * 100cqw);
   --radius-asset-file-type: calc(5 / 410.84 * 100cqw);
 }
