@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 @import "./styles/font-size.css";
 @import "@fontsource-variable/inter";
 
@@ -35,6 +36,14 @@
   --asset-metadata-padding-x: calc(8 / 410.84 * 100cqw);
   --asset-metadata-padding-b: calc(14 / 410.84 * 100cqw);
   --asset-key-value-gap: calc(5 / 410.84 * 100cqw);
+
+  --enter-code-container-gap: calc(48 / 1360 * 100vw);
+  --enter-code-input-gap: calc(32 / 1360 * 100vw);
+  --enter-code-input-width: calc(106.857 / 1360 * 100vw);
+  --enter-code-input-height: calc(190 / 1360 * 100vw);
+  --enter-code-input-border-b: calc(8 / 1360 * 100vw);
+  --enter-code-caret-width: calc(4 / 1360 * 100vw);
+  --enter-code-caret-height: calc(88 / 1360 * 100vw);
 }
 
 @media (width >= 835px) {

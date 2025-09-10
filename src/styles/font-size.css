@@ -34,6 +34,16 @@
   --footer--line-height: 1.2;
   --footer--letter-spacing: -0.01em;
   --footer--font-weight: 500;
+
+  --enter-code-title: calc(32 / 1360 * 100vw);
+  --enter-code-title--line-height: 1.2;
+  --enter-code-title--letter-spacing: -0.04em;
+  --enter-code-title--font-weight: 700;
+
+  --enter-code-input: calc(101.32 / 1360 * 100vw);
+  --enter-code-input--line-height: 1.24;
+  --enter-code-input--letter-spacing: -0.02em;
+  --enter-code-input--font-weight: 700;
 }
 
 @media (width >= 835px) {
@@ -78,4 +88,18 @@
   --text-footer--line-height: var(--footer--line-height);
   --text-footer--letter-spacing: var(--footer--letter-spacing);
   --text-footer--font-weight: var(--footer--font-weight);
+
+  --text-enter-code-title: var(--enter-code-title);
+  --text-enter-code-title--line-height: var(--enter-code-title--line-height);
+  --text-enter-code-title--letter-spacing: var(
+    --enter-code-title--letter-spacing
+  );
+  --text-enter-code-title--font-weight: var(--enter-code-title--font-weight);
+
+  --text-enter-code-input: var(--enter-code-input);
+  --text-enter-code-input--line-height: var(--enter-code-input--line-height);
+  --text-enter-code-input--letter-spacing: var(
+    --enter-code-input--letter-spacing
+  );
+  --text-enter-code-input--font-weight: var(--enter-code-input--font-weight);
 }
