@@ -16,14 +16,13 @@
   --logo-height: calc(31.58 / 667 * 100cqw);
   --hero-tagline-prefix-margin-l: 0;
   --action-button-group-margin-t: calc(-24.57 / 667 * 100cqw);
-  --action-button-group-padding-x: calc(12.36 / 667 * 100cqw);
-  --action-button-height: calc(47.36 / 667 * 100cqw);
-  --action-button-gap: calc(16.27 / 667 * 100cqw);
-  /* TODO: align the design */
-  --arrow-right-icon-width: calc(20 / 667 * 100cqw);
-  --arrow-right-icon-height: calc(20 / 667 * 100cqw);
-  --asterisk-icon-width: calc(20 / 667 * 100cqw);
-  --asterisk-icon-height: calc(20 / 667 * 100cqw);
+  --action-button-group-padding-x: calc(12.356 / 667 * 100cqw);
+  --action-button-height: calc(40 / 667 * 100cqw);
+  --action-button-gap: calc(12 / 667 * 100cqw);
+  --arrow-right-icon-width: calc(15.5 / 667 * 100cqw);
+  --arrow-right-icon-height: calc(17.257 / 667 * 100cqw);
+  --asterisk-icon-width: calc(16.34 / 667 * 100cqw);
+  --asterisk-icon-height: calc(15.825 / 667 * 100cqw);
 
   --asset-width: max(239px, 31.8cqw);
   --asset-padding: calc(6 / 410.84 * 100cqw);
@@ -108,6 +107,17 @@
   --radius-asset: max(8px, calc(14 / 1292 * 100cqw));
   --radius-asset-image: calc(8 / 410.84 * 100cqw);
   --radius-asset-file-type: calc(5 / 410.84 * 100cqw);
+  --animate-font-pulse: fontPulse 1080ms ease-in-out infinite alternate;
+  @keyframes fontPulse {
+    0%,
+    9.26% {
+      transform: scale(1);
+    }
+    90.74%,
+    100% {
+      transform: scale(1.03125);
+    }
+  }
 }
 
 body {

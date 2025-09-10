@@ -25,7 +25,7 @@
   --asset-key-value--letter-spacing: 0em;
   --asset-key-value--font-weight: 500;
 
-  --action-button: calc(24.4 / 667 * 100cqw);
+  --action-button: calc(22 / 667 * 100cqw);
   --action-button--line-height: 1.2;
   --action-button--letter-spacing: -0.03em;
   --action-button--font-weight: 700;

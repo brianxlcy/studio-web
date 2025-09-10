@@ -68,24 +68,34 @@ function Index() {
         <div className="self-start mt-(--action-button-group-margin-t) px-(--action-button-group-padding-x)">
           <ActionButton>
             START NOW
-            <img
-              src={arrowRight}
-              alt="arrowRightIcon"
-              className="w-(--arrow-right-icon-width) h-(--arrow-right-icon-height)"
-            />
+            <div className="relative overflow-hidden">
+              <img
+                src={arrowRight}
+                alt="arrowRightIcon"
+                className="absolute inset-0 w-(--arrow-right-icon-width) h-(--arrow-right-icon-height)
+                transition-transform ease-out duration-300 -translate-x-[150%] group-hover:translate-x-0"
+              />
+              <img
+                src={arrowRight}
+                alt="arrowRightIcon"
+                className="w-(--arrow-right-icon-width) h-(--arrow-right-icon-height)
+                transition-transform ease-out duration-300 group-hover:translate-x-[150%]"
+              />
+            </div>
           </ActionButton>
           <ActionButton>
             ENTER THE CODE
             <img
               src={asterisk}
               alt="asteriskIcon"
-              className="w-(--asterisk-icon-width) h-(--asterisk-icon-height)"
+              className="w-(--asterisk-icon-width) h-(--asterisk-icon-height)
+              transition-transform ease-out duration-300 group-hover:rotate-[72deg]"
             />
           </ActionButton>
         </div>
       </div>
 
-      <footer className="absolute inset-x-0 bottom-8 text-center text-footer text-foreground/40 select-none">
+      <footer className="absolute inset-x-0 bottom-8 text-center text-footer text-foreground/40 select-none animate-font-pulse">
         DRAG AND DROP
       </footer>
     </div>

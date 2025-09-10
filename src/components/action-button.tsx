@@ -7,7 +7,7 @@ export default function ActionButton({
   return (
     <button
       className={cn(
-        `w-fit h-(--action-button-height) flex items-center gap-(--action-button-gap) text-action-button italic select-none`,
+        `group w-fit h-(--action-button-height) flex items-center gap-(--action-button-gap) text-action-button italic select-none`,
         className
       )}
       {...props}
