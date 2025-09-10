@@ -21,7 +21,7 @@ export function HeroTaglinePrefix({
 }: React.ComponentProps<"span">) {
   return (
     <span
-      className={cn("ml-(--hero-tagline-prefix-margin-l)", className)}
+      className={cn("835:ml-(--hero-tagline-prefix-margin-l)", className)}
       {...props}
     />
   );

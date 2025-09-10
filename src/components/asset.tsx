@@ -2,14 +2,16 @@ import { cn } from "@/lib/utils";
 
 export function Asset({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div
-      className={cn(
-        `absolute w-[31.8cqw] h-auto aspect-[0.855] p-(--asset-padding) flex flex-col gap-(--asset-gap)
-        bg-white/72 backdrop-blur-2xl rounded-asset font-inter select-none pointer-events-none`,
-        className
-      )}
-      {...props}
-    />
+    <div className="835:absolute @container w-(--asset-width) h-auto aspect-[0.855] rounded-asset overflow-hidden">
+      <div
+        className={cn(
+          `size-full p-(--asset-padding) flex flex-col gap-(--asset-gap)
+        bg-white/72 backdrop-blur-2xl font-inter select-none pointer-events-none`,
+          className
+        )}
+        {...props}
+      />
+    </div>
   );
 }
 
