@@ -45,13 +45,33 @@ function Index() {
     <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent>
-          <DialogTitle />
-          <DialogDescription />
-          <div className="size-full flex flex-col items-center justify-center gap-(--enter-code-container-gap)">
-            <h1 className="text-enter-code-title text-foreground/48 select-none">
-              6-Digit Code
-            </h1>
-            <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS_AND_CHARS}>
+          <DialogTitle className="sr-only">Enter the code</DialogTitle>
+          <DialogDescription className="sr-only">
+            Enter the code
+          </DialogDescription>
+
+          <div className="relative size-full flex flex-col items-center justify-center max-w-[2560px] mx-auto">
+            <header className="absolute top-0 left-0 flex flex-col gap-5 px-10 select-none">
+              <div className="h-20 flex items-center px-2">
+                <img
+                  src={logo}
+                  alt="spanStudio logo"
+                  className="w-[44.6px] h-6"
+                />
+              </div>
+              <h1 className="w-[338px] h-[140px] text-[80px] font-bold leading-[0.88] tracking-[-0.02em] italic">
+                Enter the code
+              </h1>
+              <span className="text-[22px] leading-none tracking-[-0.02em] italic">
+                Velocity matters.
+              </span>
+            </header>
+            <InputOTP
+              maxLength={6}
+              inputMode="text"
+              pattern={REGEXP_ONLY_DIGITS_AND_CHARS}
+              data-1p-ignore="true"
+            >
               <InputOTPSlot index={0} />
               <InputOTPSlot index={1} />
               <InputOTPSlot index={2} />
@@ -59,6 +79,9 @@ function Index() {
               <InputOTPSlot index={4} />
               <InputOTPSlot index={5} />
             </InputOTP>
+            <footer className="absolute inset-x-0 bottom-8 text-center text-footer text-foreground/32 select-none">
+              ESC TO ESCAPE
+            </footer>
           </div>
         </DialogContent>
       </Dialog>
@@ -104,20 +127,20 @@ function Index() {
             <HeroTaglineSuffix>dio</HeroTaglineSuffix>
           </HeroTagline>
           <div className="self-start mt-(--action-button-group-margin-t) px-(--action-button-group-padding-x)">
-            <ActionButton>
+            <ActionButton href="/login">
               START NOW
               <div className="relative overflow-hidden">
                 <img
                   src={arrowRight}
                   alt="arrowRightIcon"
                   className="absolute inset-0 w-(--arrow-right-icon-width) h-(--arrow-right-icon-height)
-                transition-transform ease-out duration-300 -translate-x-[150%] group-hover:translate-x-0"
+                transition-transform ease-out duration-400 -translate-x-[150%] group-hover:translate-x-0"
                 />
                 <img
                   src={arrowRight}
                   alt="arrowRightIcon"
                   className="w-(--arrow-right-icon-width) h-(--arrow-right-icon-height)
-                transition-transform ease-out duration-300 group-hover:translate-x-[150%]"
+                transition-transform ease-out duration-400 group-hover:translate-x-[150%]"
                 />
               </div>
             </ActionButton>
@@ -133,7 +156,7 @@ function Index() {
           </div>
         </div>
 
-        <footer className="absolute inset-x-0 bottom-8 text-center text-footer text-foreground/40 select-none animate-font-pulse">
+        <footer className="absolute inset-x-0 bottom-8 text-center text-footer text-foreground/32 select-none">
           DRAG AND DROP
         </footer>
       </div>

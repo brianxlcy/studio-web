@@ -39,8 +39,8 @@ function InputOTPSlot({
       data-active={isActive}
       className={cn(
         `relative flex w-(--enter-code-input-width) h-(--enter-code-input-height) items-center justify-center
-        border-b-(length:--enter-code-input-border-b) border-[#2F290B] data-[active=true]:border-foreground/60
-        text-enter-code-input transition-colors`,
+        border-b-(length:--enter-code-input-border-b) border-foreground/16 data-[active=true]:border-foreground/60
+        text-enter-code-input transition-colors backdrop-blur-[30px]`,
         className
       )}
       {...props}
